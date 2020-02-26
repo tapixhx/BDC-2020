@@ -2,39 +2,24 @@ const express = require('express');
 //requiring user and event model
 const User = require('../models/user');
 
-const app = express();
-
-
 const nodeMailer = require('nodemailer');
 //mail configurations
 const transporter = nodeMailer.createTransport({
+    pool: true,
     host: 'smtp.gmail.com',
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-        user: 'akgecscrolls18@gmail.com', 
-        pass: 'hashakgec18'
+        user: 'bdc.akgec@gmail.com', 
+        pass: 'silivein'
     }
 }); 
 
-
-//require regex
-const Regex = require("regex");
+const messages = [];
 
 //requiring validation modules
 const { body } = require('express-validator');
 const { validationResult } = require('express-validator');
-
-
-// //requiring modules necessary for sending mails
-// const nodemailer = require('nodemailer');
-// const sendgridTransport = require('nodemailer-sendgrid-transport');
-// // const config = require('../util/config');
-// const transporter = nodemailer.createTransport(sendgridTransport({
-//     auth: {
-//         api_key: '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'
-//     }
-// }));
 
 //router defined in express
 const router = express.Router();
@@ -53,7 +38,7 @@ router.post('/register',
         .trim()
         .not()
         .isEmpty()
-        .matches(/^([1][6-9][0-9]{5})$/, "i")
+        .matches(/^([1][6-9][0-9]{5}D?)$/, "i")
     ,
     body('course')
         .trim()
@@ -84,7 +69,6 @@ router.post('/register',
         .not()
         .isEmpty()
         .matches(/^([6-9][0-9]{9})$/, "i"),
-    
     ],
     (req, res, next) => {
 
@@ -119,6 +103,7 @@ router.post('/register',
         //       error.statusCode = 409;
         //       throw error;
         //     }
+        // })
             const user = new User({
                 name: name,
                 student_no: student_no,
@@ -134,12 +119,28 @@ router.post('/register',
                 res.status(201).json({
                 message: 'User saved'
                 })
-                transporter.sendMail({
+
+                const message = {
                     to: email,         // List of recipients
-                    from: 'utkarsh@gmail.com', // Sender address
+                    from: 'bdc.akgec@gmail.com', // Sender address
                     subject: 'Registered for BDC', // Subject line
-                    text: `<h1>Hi ${name} !. You have successfully registered for BDC</h1>` // Plain text body
-                    })
+                    html: `<h1>Hi ${name} !. You have successfully registered for BDC</h1>` // Plain text body
+                };
+
+                messages.push(message);
+
+                while (transporter.isIdle() && messages.length) {
+                    transporter.sendMail(messages.shift(), function(err, info) {
+                        if (err) {
+                          console.log(err)
+                        } else {
+                          console.log(info);
+                        }
+                    });
+                }
+
+                console.log(messages)
+                
         //   });
     }
 );
