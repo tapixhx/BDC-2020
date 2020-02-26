@@ -1,6 +1,7 @@
 //requiring express and database
 const express = require('express');
 const sequelize = require('./util/database');
+const path = require('path');
 
 //requiring routes
 const feedRoutes = require('./routes/feed');
@@ -19,8 +20,18 @@ app.use((req, res, next) => {
     next();  
 })
 
+//deployment
+app.use(express.static(path.join(__dirname, 'dist/client')));
+
+
 //redirecting to routes
 app.use('/', feedRoutes);
+
+
+app.use('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/client/index.html'));
+});
+
 
 //middleware error handler
 app.use((error, req, res, next) => {
