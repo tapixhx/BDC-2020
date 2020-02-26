@@ -24,11 +24,13 @@ app.use('/', feedRoutes);
 
 //middleware error handler
 app.use((error, req, res, next) => {
-  console.log(error);
+  console.log('dd..........................................');
+  console.log(error.message);
+  console.log(error.data);
   const status = error.statusCode || 500;
   const message = error.message;
   const data = error.data;
-  res.status(status).json({ message: message, data: data })
+  res.status(status).json({ message: message, data: data[0].msg })
 })
 
 //starting server
