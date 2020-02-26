@@ -1,0 +1,28 @@
+{
+  "name": "bdc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@sendgrid/mail": "^6.5.3",
+    "express": "^4.17.1",
+    "express-mailer": "^0.3.1",
+    "express-validator": "^6.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^1.7.0",
+    "nodemailer": "^6.3.0",
+    "nodemailer-mailgun-transport": "^2.0.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "regex": "^0.1.1",
+    "sequelize": "^5.18.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
