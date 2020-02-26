@@ -1,6 +1,8 @@
 //requiring user model
 const User = require('../models/user');
 
+const path = require('path');
+
 const config = require('../util/config');
 
 const messages = [];
@@ -41,23 +43,18 @@ exports.registerUser = (req, res, next) => {
         throw error;
         }
 
-    if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
-        const error = new Error("Please select captcha");
-        error.statusCode = 409;
-        throw error;
-        }
-        const secretKey = process.env.secretKey;
-        const verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
-        request(verificationUrl,function(error,response,body) {
-        body = JSON.parse(body);
-        if(body.success !== undefined && !body.success) {
-            const error = new Error("Failed captcha verification");
-            error.statusCode = 409;
-            throw error;
-        }
-    })
-
-
+        const handleSend = (req, res) => {
+            const secret_key = process.env.secretKey;
+            const token = req.body.token;
+            const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secret_key}&response=${token}`;
+        
+            fetch(url, {
+                method: 'post'
+            })
+                .then(response => response.json())
+                .then(google_response => res.json({ google_response }))
+                .catch(error => res.json({ error }));
+        };
 
         const user = new User({
             name: name,
@@ -81,7 +78,8 @@ exports.registerUser = (req, res, next) => {
                 subject: 'Registered for BDC', // Subject line
                 attachments: [{
                     filename: 'silogo.png',
-                    path:  __dirname +'/images/silogo.png',
+                    path: path.join(__dirname, '../', '/images/silogo.png'),
+                    //path:  __dirname +'../images/silogo.png',
                     cid: 'logo'
                 }],
                 html: `<html>
