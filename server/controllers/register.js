@@ -41,21 +41,21 @@ exports.registerUser = (req, res, next) => {
         throw error;
         }
 
-    // if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
-    //     const error = new Error("Please select captcha");
-    //     error.statusCode = 409;
-    //     throw error;
-    //     }
-    //     const secretKey = process.env.secretKey;
-    //     const verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
-    //     request(verificationUrl,function(error,response,body) {
-    //     body = JSON.parse(body);
-    //     if(body.success !== undefined && !body.success) {
-    //         const error = new Error("Failed captcha verification");
-    //         error.statusCode = 409;
-    //         throw error;
-    //     }
-    // })
+    if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
+        const error = new Error("Please select captcha");
+        error.statusCode = 409;
+        throw error;
+        }
+        const secretKey = process.env.secretKey;
+        const verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+        request(verificationUrl,function(error,response,body) {
+        body = JSON.parse(body);
+        if(body.success !== undefined && !body.success) {
+            const error = new Error("Failed captcha verification");
+            error.statusCode = 409;
+            throw error;
+        }
+    })
 
 
 
@@ -79,7 +79,46 @@ exports.registerUser = (req, res, next) => {
                 to: email,         // List of recipients
                 from: 'bdc.akgec@gmail.com', // Sender address
                 subject: 'Registered for BDC', // Subject line
-                html: `<h1>Hi ${name} !. You have successfully registered for BDC</h1>` // Plain text body
+                attachments: [{
+                    filename: 'silogo.png',
+                    path:  __dirname +'/images/silogo.png',
+                    cid: 'logo'
+                }],
+                html: `<html>
+                <head>
+                    <title></title>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+                    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+                
+                </head>
+                <body>
+                <div >
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <p  style="font-family: 'Montserrat black';font-size:2.5em;padding:20px;background:radial-gradient(ellipse at center, rgba(26,0,0,1) 50%, rgba(0,0,0,1) 100%) no-repeat fixed center;color:#fff;text-align:center; ">BLOOD DONATION CAMP 2019</p>
+                        </div>
+                        <div class="col-12">
+                            <div class="container">
+                             <div  style="padding:15px;padding-bottom: 50px;text-align: center;">
+                                 <h2 style="font-weight: bold;padding-top: 4px;padding-bottom: 4px;">Hello ${name} </h2>
+                                 <h3  style="font-weight:bold;color:rgb(30,0,0);font-size:2em;">THANK YOU FOR REGISTRATION</h3>
+                                 <p>You have been succesfully registered for blood donation camp.<br>
+                                 You will be notified further for slot</p>
+                             </div>
+                             <hr style="border:1px solid #000;">
+                         </div>
+                        </div>
+                        <div class="col-12" >
+                            <div style="text-align: center;">
+                                <p style="color:rgb(26,0,0);font-size: 1.5em;font-weight: bold;">Regards: SOFTWARE INCUBATOR</p>
+                                <img src="cid:logo" height="28px" width="28px" >
+                                <p>This is system generated mail, please do not reply </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </body>
+                </html>`
             };
                 
             messages.push(message);
