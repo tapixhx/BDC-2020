@@ -93,7 +93,7 @@ exports.registerUser = (req, res, next) => {
                 <div >
                     <div class="row no-gutters">
                         <div class="col-12">
-                            <p  style="font-family: 'Montserrat black';font-size:2.5em;padding:20px;background:radial-gradient(ellipse at center, rgba(26,0,0,1) 50%, rgba(0,0,0,1) 100%) no-repeat fixed center;color:#fff;text-align:center; ">BLOOD DONATION CAMP 2019</p>
+                            <p  style="font-family: 'Montserrat black';font-size:2.5em;padding:20px;background:radial-gradient(ellipse at center, rgba(26,0,0,1) 50%, rgba(0,0,0,1) 100%) no-repeat fixed center;color:#fff;text-align:center; ">BLOOD DONATION CAMP 2020</p>
                         </div>
                         <div class="col-12">
                             <div class="container">
@@ -109,7 +109,7 @@ exports.registerUser = (req, res, next) => {
                         <div class="col-12" >
                             <div style="text-align: center;">
                                 <p style="color:rgb(26,0,0);font-size: 1.5em;font-weight: bold;">Regards: SOFTWARE INCUBATOR</p>
-                                <img src="cid:logo" height="28px" width="28px" >
+                                <img src="cid:logo" height="30px" width="30px" >
                                 <p>This is system generated mail, please do not reply </p>
                             </div>
                         </div>
