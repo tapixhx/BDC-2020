@@ -24,17 +24,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css" 
+
             ],
-            "scripts": [
-              // "src/assets/js/main.js",
-              // "src/assets/js/preloader.js",
-              // "src/assets/js/blob.js",
-              // "src/assets/js/wordz.js",
-              // "src/assets/js/index.js",
-              // "src/assets/js/plane.js",
-              // "src/assets/js/test.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {

@@ -3,8 +3,13 @@ import { NgModule } from '@angular/core';
 declare var $: any;
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RecaptchaModule,RecaptchaFormsModule,   } from 'ng-recaptcha';
+
 
 @NgModule({
   declarations: [
@@ -13,7 +18,12 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    CommonModule,
+    RecaptchaModule.forRoot(),
+    RecaptchaFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
