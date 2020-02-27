@@ -49,7 +49,8 @@ sequelize
   // .sync({ force: true })
   .sync()
   .then(() => {
-    app.listen(8080);
+    const port = process.env.PORT || '8080';
+    app.listen(port);
   })
   .catch(err => {
     console.log(err)
