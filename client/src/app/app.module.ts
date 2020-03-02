@@ -14,7 +14,7 @@ import { RecaptchaModule,RecaptchaFormsModule,   } from 'ng-recaptcha';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

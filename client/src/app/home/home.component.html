@@ -1,16 +1,26 @@
 <style>
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap');
 </style>
-
+<div *ngIf=Loading class="overlay">
+    <img src="../../assets/images/Asset 5.png" class="loader" style="position: absolute;
+    left: 45%;
+    top: 35%;
+    display: inline-block;
+    height:20rem;">
+</div>
 <div id="hola">
     <div id="preloader">
-<img src="../../assets/images/preload_logo.svg" alt=""/> </div>
+<img src="../../assets/images/Asset 5.png"  style="position: absolute;
+        left: 15%;
+        top: 15%;
+        display: inline-block;
+        height:10rem;" alt=""/> </div>
         </div>
 <main>
 <div class="cd-index cd-main-content">
 <div class="heady">
-<div class="logo"><a href="index.html"><img src="../../assets/images/logo2.png" alt="logo"/></a></div>
-<div class="navitems">
+<div class="logo" style="margin-top:12px;"><img src="../../assets/images/rotaryclubgzb.png" alt="rotary_club"/></div>
+<!-- <div class="navitems">
     <div class="navcolumn">
     <h2>About</h2>
     <p>Home</p>
@@ -27,25 +37,25 @@
     <h2>Contact</h2>
     <a class="cd-btn" href="contact.html#top" data-type="page-transition">Let's Talk</a>
 </div>
-</div>
+</div> -->
 <!-- <div class="bubbleback"></div>
 <div class="bubble"></div> -->
 <div class="bubble-wrap">
 <!-- <div class="bar first"></div>
 <div class="bar second"></div>
 <div class="bar third"></div> -->
-<div class="logo"><a href="index.html"><img src="../../assets/images/logo2.png" alt="logo"/></a></div>
+<div class="logo"><img src="../../assets/images/logo2.png" alt="logo"/></div>
 </div>
 
 </div>
-<a class="leftylink cd-btn" href="about.html" data-type="page-transition">ROTARY CLUB,GHAZIABAD</a>
-<a class="rightylink cd-btn" href="contact.html" data-type="page-transition">AJAY KUMAR GARG ENGINEERING COLLEGE,GHAZIABAD</a>
-<div class="footleft"><p style="font-family: 'open sans'; font-weight: light;margin-bottom: 0.5rem;">Donated by</p>
-    <p style="font-family: 'open sans'; font-weight: light;">SOFTWARE INCUBATOR</p>
-</div>
-<div class="footright">
+<span class="leftylink clg_name">ROTARY CLUB, SAHIBABAD</span>
+<a class="rightylink cd-btn clg_name" href="https://www.akgec.ac.in/" target="_blank" >AJAY KUMAR GARG ENGINEERING COLLEGE, GHAZIABAD</a>
+<!-- <div class="footleft">
     <a href="http://silive.in/" target="_blank"><img src="../../assets/images/silogo.png" width="" height="" alt=""/></a>
-</div>
+</div> -->
+<!-- <div class="footright">
+    <a href="http://silive.in/" target="_blank"><img src="../../assets/images/silogo.png" width="" height="" alt=""/></a>
+</div> -->
 <div class="leftbar"></div>
 <div class="rightbar"></div>
 <div class="planewrap"><img id="plane" class="planey" src="../../assets/images/plane.png" width="100%" alt=""/><img class="planeymob" src="../../assets/images/plane.png" width="100%" alt=""/></div>
@@ -59,60 +69,64 @@
 <div class="fluiddark">
      </div>
 </div>
-<h1 style="color:#ffffff;">
-<span class="word">BLOOD DONATION CAMP</span>
-<span class="word">BLOOD DONATION CAMP</span>
-<span class="word">BLOOD DONATION CAMP</span>
+<h1 style="color:#ffffff; font-family: 'open sans';">
+<span class="word">BLOOD DONATION CAMP'20</span>
+<span class="word">BLOOD DONATION CAMP'20</span>
+<span class="word">BLOOD DONATION CAMP'20</span>
 </h1>
 <br>
-<h1 style="color:#ffffff;">
-<span class="location" style="font-size:4vw;font-weight: lighter;">Mechanical Block</span>
-<div class="date" style="font-size:4vw">4th March</div>
+<h1 class="land" style="color:#ffffff; font-family: 'open sans'; ">
+<span class="date">4<sup>th</sup> March</span>
+<div class="location">ME Block</div>
 
 </h1>
 </div>
 
 <!-- <div class="scroll bounce"> -->
-    <div class="row justify-content-center no-gutter bounce" style="margin-top:4%;">
-        <a href="#register_head" class="regis_btn_top"><button type="submit" class="regis_inner">DONATE</button></a>
-    </div>
+        <div class="justify-content-center  no-gutter bounce donate_contain">
+            <a href="#regis" class="regis_btn_top"><button type="submit" class="regis_inner">DONATE</button></a>
+        </div>
 <!-- </div> -->
 
 </div>
 
 <div class="about">
 <div class="abouttext about_bdc">
-    <h2 class="hideme" style="font-size:3vw">About <span style="color: red;">BDC 2020</span> </h2> 
-    <p class="hideme" style="font-size:1.5vw;font-weight:100">Ajay Kumar Garg Engineering College, in keeping with its policy of commitment towards society and to sensitize the students accordingly, organizing its annual <span style="color: red;"> Blood Donation Camp</span> in collaboration with Rotary Club Sahibabad & Vardaan Multispecialty Hospital Blood Bank.</p>
+    <h2 class="hideme">About <span style="color: red;">BDC 2020</span> </h2> 
+    <p class="hideme text-sm" style="font-weight:100; font-size: 23px;">
+        Ajay Kumar Garg Engineering College, in keeping with its policy of commitment towards society and to sensitize the 
+        students accordingly, is organizing its annual <span style="color: red;"> Blood Donation Camp</span> in collaboration 
+        with Rotary Club & Vardaan Multispecialty Hospital Blood Bank.<br/><br/>
+        <span class="text">"करके देखो अच्छा लगता है"</span>
+    </p>
+    
 </div>
 <div class="skillz group">
     <div class="direction">
         <div class="skillzpic hideme"><img src="../../assets/images/direction.png" width="" height="" alt=""/></div>
         <div class="fluid skilly"></div> 
-        <h3 class="hideme font_sans" style="font-size:3vw">Social Awareness</h3>
-        <p class="hideme font_sans">
-            Without pain there is no gain. 
+        <h3 class="hideme font_sans">Social Awareness</h3>
+            <p class="hideme font_sans">Without pain there is no gain. 
             It becomes exemplary when blood donation comes into spotlight, your little effort could give a gift of life to someone else. 
             According to a WHO report, out of the needed 12 million units of blood only 9 million units are available. 
-            More than 38, 000 donations are needed per day. 
-            All these problems can be solved, if you just spare 5 minutes of your life to donate blood.
-            <br>
-            <br>
-            Your 1 pint blood can be a life saviour for that accident victim or that cancer patient.
-                <br>
-                <br> Moreover, blood donation safety will be ensured by AKGEC, itself.
-                 All the vials and syringes will be safe to use. Every one will follow a proper code of conduct to ensure your safety.
-        </p>
+            
+            </p>
+            <p class="hideme font_sans">
+                Your 1 pint blood can be a life saviour for that accident victim or that cancer patient.
+            </p>
+            <p class="hideme font_sans">
+                Moreover, blood donation safety will be ensured by AKGEC, itself.
+                All the vials and syringes will be safe to use. Everyone will follow a proper code of conduct to ensure your safety.
+            </p>
     </div>
     <div class="strategy">
         <div class="skillzpic2 hideme"><img src="../../assets/images/strategy.png" width="" height="" alt=""/></div>
         <div class="fluid skillyright"></div>
-        <h3 class="hideme font_sans" style="font-size:3vw">Myths</h3>
-        <div class="hideme font_sans description">
-            <p class="hideme font_sans">Giving blood hurts and in time consuming.</p>
+        <h3 class="hideme font_sans">Myths</h3>
+        <div class="description">
+            <p class="hideme font_sans">Giving blood hurts and is time consuming.</p>
             <p class="hideme font_sans"> Blood donation isn't for women.</p> 
             <p class="hideme font_sans">Health deteriorates after donating blood.</p>
-            <p class="hideme font_sans">If you smoke, you cannot be a blood donor.</p>
             <p class="hideme font_sans">A blood donor is prone to infection.</p>
             <p class="hideme font_sans">There is limited blood in the body and
             <br>it is unhealthy to give some away.</p> 
@@ -121,10 +135,10 @@
     <div class="design">
         <div class="skillzpic hideme"><img src="../../assets/images/design.png" width="" height="" alt=""/></div>
         <div class="fluid skilly"></div>
-        <h3 class="hideme font_sans" style="font-size:3vw">Facts</h3>
+        <h3 class="hideme font_sans">Facts</h3>
         <div>
             <p class="hideme font_sans">The gift of blood is the gift of life. There is no substitute for human blood.</p> 
-            <p class="hideme font_sans"> Donors can give either whole blood or specific blood components only. </p>
+            <p class="hideme font_sans"> A person can donate blood every 90 days (3 months). </p>
             <p class="hideme font_sans"> One blood donation can save the lives of up to three people.</p>
             <p class="hideme font_sans">The blood type most often requested by hospitals is type O. </p>
         </div>
@@ -133,17 +147,20 @@
 </div>
 
 <div class="abouttext_gallery car">
-<h4 class="heading_gallary">GALLERY </h4>
+<h1 class="heading_gallary">GALLERY</h1>
 
     <div id="carouselExampleIndicators" class="carousel slide gallery mx-auto" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
         </ol>
-        <div class="carousel-inner gallery_image">
+        <div class="carousel-inner gallery_image" >
           <div class="carousel-item active">
-            <img class="d-block w-100" src="../../assets/images/gal1.jpg" alt="First slide">
+            <img class="d-block w-100" src="../../assets/images/gal1.png" alt="First slide">
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="../../assets/images/gal2.jpg" alt="Second slide">
@@ -151,142 +168,156 @@
           <div class="carousel-item">
             <img class="d-block w-100" src="../../assets/images/gal3.jpg" alt="Third slide">
           </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../../assets/images/gal4.jpg" alt="Fourth slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../../assets/images/gal5.jpg" alt="Fifth slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../../assets/images/gal6.jpg" alt="Sixth slide">
+          </div>
         </div>
       </div>
 </div>
 
 <div class="container abouttext">
+
 <!--Convenors-->
 
-<h2 class="heading_gallary mb-4 mt-4">CONVENORS</h2>
-<div class="row convenor_row">
-<div class="col-xs-2 col-sm-3 col-md-3 col-lg-2 px-4 convenor_team">
-    <div class="convenors_border">
-    <div class="convenor_image animation">
-        <img src="../../assets/images/conyenor.jpg" height="170" width="170" class="img-fluid px-1 pt-3">
+<h1 class="heading_gallary mb-4 mt-4">CONVENORS</h1>
+<div class="row convenor_row text-center mx-auto">
+    <div class="col-xs-2 col-sm-8 col-md-8 col-lg-12 convenor_team40 organising_team">
+        <div class="convenors_border">
+        <div class="convenor_image animation pt-3">
+            <img src="../../assets/images/dean.png" height="170" width="170" class="img-fluid px-1">
+        </div>
+    </div>
+    <div class="convenor_information mt-4 mb-2">
+        <h5 class="convenor_name">Prof. V.K.Parashar</h5>
+        <h5 class="py-2 convenor_type">Organising Head</h5> 
+    </div>
     </div>
 </div>
+
+
+
+<div class="row organiser_row text-center mx-auto">
+
+<div class="col-xs-2 col-sm-5 col-md-5 col-lg-2 organiser_team">
+<div class="convenors_border">
+<div class="convenor_image animation">
+    <img src="../../assets/images/convenor3.png" height="170" width="170" class="img-fluid px-1 pt-3">
+</div>
+</div>
 <div class="convenor_information mt-4 mb-2">
-    <h5>MUSKAN AGRAWAL</h5>
-    <h5 class="py-2">Convenor</h5> 
+<h5 class="organiser_name">ARNAV<br> BAJPAYEE</h5>
+<h5 class="py-2 organiser_type">Convenor</h5> 
+</div>
+</div>
+<div class="col-xs-2 col-sm-5 col-md-5 col-lg-2 organiser_team">
+<div class="convenors_border">
+<div class="convenor_image animation pt-3">
+    <img src="../../assets/images/muskanverma.png" height="170" width="170" class="img-fluid px-1">
+</div>
+</div>
+<div class="convenor_information mt-4 mb-2">
+<span class="organiser_name" id="name1">MUSKAN <br>VERMA</span>
+<h5 class="py-2 organiser_type">Convenor</h5> 
 </div>
 </div>
 
-<div class="col-xs-2 col-sm-3 col-md-3 col-lg-2 px-4 convenor_team">
-    <div class="convenors_border">
-    <div class="convenor_image animation">
-        <img src="../../assets/images/conyenor.jpg" height="170" width="170" class="img-fluid px-1 pt-3">
-    </div>
+<div class="col-xs-2 col-sm-5 col-md-5 col-lg-2 organiser_team">
+<div class="convenors_border">
+<div class="convenor_image animation">
+    <img src="../../assets/images/sir.png" height="170" width="170" class="img-fluid px-1 pt-3">
+</div>
 </div>
 <div class="convenor_information mt-4 mb-2">
-   <h5>MUSKAN AGRAWAL</h5>
-   <h5 class="py-2">Convenor</h5>
+<h5 class="organiser_name">RISHABH <br>KUMAR</h5>
+<h5 class="py-2 organiser_type">Convenor</h5>
 </div>
 </div>
 
-<div class="col-xs-2 col-sm-3 col-md-3 col-lg-2 px-4 convenor_team">
-    <div class="convenors_border">
-    <div class="convenor_image animation">
-        <img src="../../assets/images/conyenor.jpg" height="170" width="170" class="img-fluid px-1 pt-3">
-    </div>
+<div class="col-xs-2 col-sm-5 col-md-5 col-lg-2 organiser_team">
+<div class="convenors_border">
+<div class="convenor_image animation">
+    <img src="../../assets/images/convenor4.png" height="170" width="170" class="img-fluid px-1 pt-3">
+</div>
 </div>
 <div class="convenor_information mt-4 mb-2">
-    <h5>MUSKAN AGRAWAL</h5>
-    <h5 class="py-2">Convenor</h5> 
+<h5 class="organiser_name">SIDDHARTH <br> <br> </h5>
+<h5 class="py-2 organiser_type">Convenor</h5> 
 </div>
 </div>
 
-<div class="col-xs-2 col-sm-3 col-md-3 col-lg-2 px-4 convenor_team">
-    <div class="convenors_border">
-    <div class="convenor_image animation">
-        <img src="../../assets/images/conyenor.jpg" height="170" width="170" class="img-fluid px-1 pt-3">
-    </div>
-</div>
-<div class="convenor_information mt-4 mb-2">
-    <h5>MUSKAN AGRAWAL</h5>
-    <h5 class="py-2">Convenor</h5> 
-</div>
-</div>
-
-<div class="col-xs-2 col-sm-3 col-md-3 col-lg-2 px-4 convenor_team">
-    <div class="convenors_border">
-    <div class="convenor_image animation">
-        <img src="../../assets/images/conyenor.jpg" height="170" width="170" class="img-fluid px-1 pt-3">
-    </div>
-</div>
-<div class="convenor_information mt-4 mb-2">
-    <h5>MUSKAN AGRAWAL</h5>
-    <h5 class="py-2">Convenor</h5> 
-</div>
-</div>
 </div>
 <!--/Convenors-->
 
 <!--Convenors-->
-
-<h2 class="heading_gallary mb-4" style="margin-top:6%;">WEB TEAM</h2>
-<div class="row convenor_row">
-<div class="col-xs-2 col-sm-3 col-md-3 col-lg-2 px-4 convenor_team">
+<h1 class="heading_gallary mb-4" style="margin-top:6%;">WEB TEAM</h1>
+<div class="row convenor_row team_info text-center mx-auto">
+    <div class="col-xs-2 col-sm-4 col-md-4 col-lg-2 convenor_team">
+    <div class="convenors_border">
+    <div class="convenor_image animation pt-3">
+        <img src="../../assets/images/team3.png" height="170" width="170" class="img-fluid px-1">
+    </div>
+    </div>
+    <div class="convenor_information mt-4 mb-2">
+    <h5 class="convenor_name">SRISHTI<br><br/> </h5>
+    <h5 class="py-2 convenor_type">UI/UX<br/>Designer</h5> 
+    </div>
+    </div>
+    
+    <div class="col-xs-2 col-sm-4 col-md-4 col-lg-2 convenor_team">
     <div class="convenors_border">
     <div class="convenor_image animation">
-        <img src="../../assets/images/conyenor.jpg" height="170" width="170" class="img-fluid px-1 pt-3">
+        <img src="../../assets/images/team2.png" height="170" width="170" class="img-fluid px-1 pt-3">
     </div>
-</div>
-<div class="convenor_information mt-4 mb-2">
-    <h5>MUSKAN AGRAWAL</h5>
-    <h5 class="py-2">Convenor</h5> 
-</div>
-</div>
-
-<div class="col-xs-2 col-sm-3 col-md-3 col-lg-2 px-4 convenor_team">
+    </div>
+    <div class="convenor_information mt-4 mb-2">
+    <h5 class="convenor_name">MUSKAN<br> AGRAWAL</h5>
+    <h5 class="py-2 convenor_type">UI/UX <br/>Designer</h5>
+    </div>
+    </div>
+    
+    <div class="col-xs-2 col-sm-4 col-md-4 col-lg-2 convenor_team">
     <div class="convenors_border">
     <div class="convenor_image animation">
-        <img src="../../assets/images/conyenor.jpg" height="170" width="170" class="img-fluid px-1 pt-3">
+        <img src="../../assets/images/team1.png" height="170" width="170" class="img-fluid px-1 pt-3">
     </div>
-</div>
-<div class="convenor_information mt-4 mb-2">
-   <h5>MUSKAN AGRAWAL</h5>
-   <h5 class="py-2">Convenor</h5>
-</div>
-</div>
-
-<div class="col-xs-2 col-sm-3 col-md-3 col-lg-2 px-4 convenor_team">
+    </div>
+    <div class="convenor_information mt-4 mb-2">
+    <h5 class="convenor_name">MUSKAAN <br>MITTAL <br></h5>
+    <h5 class="py-2 convenor_type">Frontend<br/>Developer</h5> 
+    </div>
+    </div>
+    
+    <div class="col-xs-2 col-sm-5 col-md-5 col-lg-2 convenor_team convenor_team2">
     <div class="convenors_border">
     <div class="convenor_image animation">
-        <img src="../../assets/images/conyenor.jpg" height="170" width="170" class="img-fluid px-1 pt-3">
+        <img src="../../assets/images/team4.png" height="170" width="170" class="img-fluid px-1 pt-3">
     </div>
-</div>
-<div class="convenor_information mt-4 mb-2">
-    <h5>MUSKAN AGRAWAL</h5>
-    <h5 class="py-2">Convenor</h5> 
-</div>
-</div>
-
-<div class="col-xs-2 col-sm-3 col-md-3 col-lg-2 px-4 convenor_team">
+    </div>
+    <div class="convenor_information mt-4 mb-2">
+        <h5 class="convenor_name" style="font-weight: 100">TAPISH<br> GUPTA</h5>
+        <h5 class="py-2 convenor_type">Frontend<br/>Developer</h5> 
+    </div>
+    </div>
+    
+    <div class="col-xs-2 col-sm-5 col-md-5 col-lg-2 convenor_team convenor_team3">
     <div class="convenors_border">
     <div class="convenor_image animation">
-        <img src="../../assets/images/conyenor.jpg" height="170" width="170" class="img-fluid px-1 pt-3">
+        <img src="../../assets/images/team5.png" height="170" width="170" class="img-fluid px-1 pt-3">
     </div>
-</div>
-<div class="convenor_information mt-4 mb-2">
-    <h5>MUSKAN AGRAWAL</h5>
-    <h5 class="py-2">Convenor</h5> 
-</div>
-</div>
-
-<div class="col-xs-2 col-sm-3 col-md-3 col-lg-2 px-4 convenor_team">
-    <div class="convenors_border">
-    <div class="convenor_image animation">
-        <img src="../../assets/images/conyenor.jpg" height="170" width="170" class="img-fluid px-1 pt-3">
     </div>
-</div>
-<div class="convenor_information mt-4 mb-2">
-    <h5>MUSKAN AGRAWAL</h5>
-    <h5 class="py-2">Convenor</h5> 
-</div>
-</div>
-</div>
-<!--/Convenors-->
+    <div class="convenor_information mt-4 mb-2">
+    <h5 class="convenor_name">UTKARSH<br> MITTAL</h5>
+    <h5 class="py-2 convenor_type">Backend<br/>Developer</h5> 
+    </div>
+    </div>
+    </div>
+    <!--/Convenors-->
 
 
 
@@ -299,45 +330,61 @@
 
 
 
-<div class="workclose"><img src="../../assets/images/wavy2.png" width="" height="" alt=""/></div>
+<div class="workclose"><img src="../../assets/images/wavy.png" width="" height="" alt=""/></div>
 
 <!-- register -->
 <div class="container abouttext" id="regis">
     <div class="idse18title">
-        <h2 class="heading_gallary mb-4 text-uppercase" id="register_head">
+        <h1 class="heading_gallary mb-4 text-uppercase" id="register_head">
             Register Yourself
-        </h2>
+        </h1>
     </div>
 
     <form (ngSubmit)="onSubmit(f)" #f="ngForm" autocomplete="off">
         <div class="container">
             <div class="row justify-content-center no-gutter regform">
 
-                <div class="col-md-5">
+                <div class="col-md-5 mt-md-3 mt-2">
                     <label class="lab" for="student_no">Student Number</label>
                     <div class="input-group mb-3">
                             <input type="text" class="form-control" id="student_no"
                                     #studentno='ngModel' ngModel required name="student_no"
                                     pattern="^[1][6789]\d{5}[dD]?$">
                     </div>
-                    <div class='validation'
+                    <div class='validation text-left'
                             *ngIf="studentno.invalid && studentno.touched && studentno.dirty">
                             Invalid Student No.</div>
-                    <div class='validation'
+                    <div class='validation text-left'
                             *ngIf="!studentno.valid && studentno.touched && !studentno.dirty">
                             Student No. can't be empty</div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 mt-md-3 mt-2">
                         <label class="lab" for="name">Donor Name</label>
                         <div class="input-group mb-3">
                                 <input type="text" class="form-control" id="name" ngModel required
                                         name="name" pattern="^[a-zA-Z ]*$" #name='ngModel'>
                         </div>
-                        <div class='validation' *ngIf="!name.valid && name.touched && name.dirty">
+                        <div class='validation text-left' *ngIf="!name.valid && name.touched && name.dirty">
                                 Invalid Full Name</div>
-                        <div class='validation' *ngIf="!name.valid && name.touched && !name.dirty">Full
+                        <div class='validation text-left' *ngIf="!name.valid && name.touched && !name.dirty">Full
                                 name can't be empty.</div>
                 </div>
+
+                <!-- <div class="col-md-5 mt-md-3 mt-2">
+                    <label class="lab" for="contact_no">Contact number</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="contact_no"
+                            #contactno='ngModel' ngModel required name="contact_no"
+                            pattern="^[6789]\d{9}$">
+                    </div>
+                    <div class='validation'
+                        *ngIf="!contactno.valid && contactno.touched && contactno.dirty">Invalid
+                        Contact No.</div>
+                    <div class='validation'
+                        *ngIf="!contactno.valid && contactno.touched && !contactno.dirty">
+                        Contact No. can't be empty</div>
+
+                </div> -->
                           
 
             </div>
@@ -345,7 +392,7 @@
                     <div  class="row justify-content-center no-gutter regform">
                         <div class="col-md-10 mt-md-3 mt-2">
                             <label class="" for="course">Course</label>
-                            <select name="course" id="course" class=" form-control" [(ngModel)]="selectedcourse"
+                            <select name="course" id="course" class="select_form form-control" [(ngModel)]="selectedcourse"
                                     required name="course" (change)="selectOption($event.target.value)">
                                     <option *ngFor="let o of courses" [value]="o.name">
                                         {{o.name}}
@@ -357,7 +404,7 @@
                 <div class="row justify-content-center no-gutter regform">
                     <div class="col-md-5 mt-md-3 mt-2">
                         <label class="lab" for="year">Year</label>
-                        <select name="year" id="year" class=" form-control" [(ngModel)]="selectedyear"
+                        <select name="year" id="year" class="select_form form-control" [(ngModel)]="selectedyear"
                                 required name="year">
                                 <option value="1">1</option>
                                 <option value="2" >2</option>
@@ -367,12 +414,17 @@
                 </div>
                        
                         <div class="col-md-5 mt-md-3 mt-2">
-                                <label class="lab" for="blood_group">Blood Group</label>
-                                <select name="blood_group" id="blood_group" class=" form-control" [(ngModel)]="selectedbg"
-                                        required>
+                                <label class="lab" for="blood_group">Blood Group (not mandatory)</label>
+                                <select name="blood_group" id="blood_group" class="select_form form-control" [(ngModel)]="selectedbg">
+                                    <option value="Don't Know">Don't Know</option>
                                         <option value="A+">A+</option>
                                         <option value="B+">B+</option>
-                                        
+                                        <option value="AB+">AB+</option>
+                                        <option value="O+">O+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O-">O-</option>
                                 </select>
                         </div>
 
@@ -380,7 +432,7 @@
                 <div class="row justify-content-center no-gutter regform">
                     <div class="col-md-5 mt-md-3 mt-2">
                             <label class="lab" for="gender">Gender</label>
-                            <select name="gender" id="gender" class=" form-control" ngModel required
+                            <select name="gender" id="gender" class="select_form form-control" ngModel required
                                     name="gender">
                                     <option selected value="Male">Male</option>
                                     <option value="Female">Female</option>
@@ -388,7 +440,7 @@
                     </div>
                     <div class="col-md-5 mt-md-3 mt-2">
                             <label class="lab" for="hosteller">Hosteler</label>
-                            <select name="hosteller" id="hosteller" class=" form-control" ngModel required>
+                            <select name="hosteller" id="hosteller" class="select_form form-control" ngModel required>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                             </select>
@@ -398,30 +450,31 @@
                     <div class="row justify-content-center no-gutter regform">
 
                             <div class="col-md-5 mt-md-3 mt-2">
-                                    <label class="lab" for="contact_no">Contact number</label>
-                                    <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="contact_no"
-                                                    #contactno='ngModel' ngModel required name="contact_no"
-                                                    pattern="^[6789]\d{9}$">
-                                    </div>
-                                    <div class='validation'
-                                            *ngIf="!contactno.valid && contactno.touched && contactno.dirty">Invalid
-                                            Contact No.</div>
-                                    <div class='validation'
-                                            *ngIf="!contactno.valid && contactno.touched && !contactno.dirty">
-                                            Contact No. can't be empty</div>
+                                <label class="lab" for="contact_no">Contact number</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="contact_no"
+                                        #contactno='ngModel' ngModel required name="contact_no"
+                                        pattern="^[6789]\d{9}$">
+                                </div>
+                                <div class='validation text-left'
+                                    *ngIf="!contactno.valid && contactno.touched && contactno.dirty">Invalid
+                                    Contact No.</div>
+                                <div class='validation text-left'
+                                    *ngIf="!contactno.valid && contactno.touched && !contactno.dirty">
+                                    Contact No. can't be empty</div>
 
                             </div>
                             <div class="col-md-5 mt-md-3 mt-2">
                                     <label class="lab" for="email">E-mail</label>
                                     <div class="input-group mb-3">
                                             <input type="text" class="form-control" id="email" 
-                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" ngModel required
+                                            pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                            ngModel required
                                                     name="email" email #email='ngModel'>
                                     </div>
-                                    <div class='validation' *ngIf="!email.valid && email.touched && email.dirty">
+                                    <div class='validation text-left' *ngIf="!email.valid && email.touched && email.dirty">
                                             Invalid E-mail</div>
-                                    <div class='validation' *ngIf="!email.valid && email.touched && !email.dirty">
+                                    <div class='validation text-left' *ngIf="!email.valid && email.touched && !email.dirty">
                                             E-mail can't be empty</div>
                             </div>
                     </div>
@@ -431,7 +484,7 @@
                                 " required class="captcha"
                                 name="response" [(ngModel)]="recap"></re-captcha>
                     </div>
-                    <div class="row justify-content-center no-gutter" style="margin-top:4%;">
+                    <div class="justify-content-center no-gutter" style="margin-top:4%;">
                         <button type="submit" class="regis_btn" [disabled]="!(f.valid && recap)"
                                 [hidden]="isHidden">Register</button>
                     </div>
@@ -445,9 +498,11 @@
 <!-- /register -->
 
 
-<div class="contactbanner">
-<div class="contacttxt">
-<h1 class="hideme">Anybody can give <span style="color:#EB1C24;">Blood</span></h1>
+<!-- <div class="contactbanner">
+<div class="contacttxt"> -->
+<!-- <h1 class="hideme">Anybody can save <span style="color:#EB1C24;">Lives</span></h1> -->
+<!-- <h1 class="hideme">करके देखो अच्छा लगता है <span style="color:#EB1C24;">Lives</span></h1>
+
 </div>
 <div class="bannersplatfoot">
 <div class="fluid">
@@ -455,7 +510,19 @@
 <div class="fluiddark">
 </div>
 </div>
-</div>
+</div> -->
 
 </div></div>
+<!-- footer -->
+<div class="container-fluid foot">
+    <div class="foot">
+            <div class="dd">Site Donated by   
+                <a class="si" href='http://silive.in/' target="__blank"> 
+                    <img src="../../assets/images/silogo.png" width="20" height="" alt="logo" style="margin:0rem 0.5rem;"/>  Software Incubator 
+                </a>
+            </div>
+    </div>
+    
+</div>
+<!-- footer -->
 </main>

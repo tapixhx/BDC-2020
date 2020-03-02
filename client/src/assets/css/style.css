@@ -30,7 +30,7 @@ body {
   clear: both;
 }
 /**fonts**/
-@font-face {
+/* @font-face {
   font-family: 'SofiaPro-SemiBold';
   src: url('../fonts/SofiaPro-SemiBold.eot');
   src: url('../fonts/SofiaPro-SemiBold.woff2') format('woff2'),
@@ -72,7 +72,7 @@ body {
        url('../fonts/SofiaPro-Bold.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
-}
+} */
 /* -------------------------------- 
 
 Blob
@@ -435,15 +435,16 @@ width: 100%;
     background-color: #0E131Ced;
     width: 100%;
     position: relative;
-    z-index: 500;
+	z-index: 500;
+	margin-top: -200px;
 }
 
 .design{
 	width: 100%;
     float: none;
-    padding: 10%;
-    text-align: left;
-	margin-top: 10%;
+    padding:0% 10%;
+	text-align: left;
+	margin-top:-100px;
 }
 .direction{
 	width: 100%;
@@ -460,6 +461,9 @@ width: 100%;
 @media only screen and (max-width: 768px) {
 	.design .direction .strategy {
 		padding:10%;
+	}
+	.skillz {
+		margin-top:0px;
 	}
 }
 .work {
@@ -1005,11 +1009,11 @@ bottom: 80px;
 }
 .leftylink{
     transform: rotate(90deg);
-    position: fixed;
+    position:fixed;
 	display: none;
     top: 50%;
-    left: -145px;
-    z-index: 15;
+    padding-left: 2.5%;
+	z-index: 15;
     color: #fff;
     font-family: SofiaPro-bold;
     font-weight: normal;
@@ -1018,7 +1022,7 @@ bottom: 80px;
 	text-decoration: line-through;
 }
 .rightylink{
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
     position: fixed;
     top: 50%;
     right: -21px;
@@ -1186,16 +1190,14 @@ color: #fff;
 .abouttext_gallery h2{
     color: #fff;
 	font-family: 'Open Sans' !important ;
-	    text-align: center;
-    font-weight: normal;
-    font-size: 10vw;
-    letter-spacing: -1px;
+	text-align: center;
+    letter-spacing: 2px;
 }
 .abouttext p{
     color: #fff;
     text-align: center;
 	font-family: 'Open Sans' !important ;
-	    font-weight: normal;
+	font-weight: normal;
     font-size: 20px;
     line-height: 34px;
     margin-top: 20px;
@@ -1382,7 +1384,7 @@ width: 100%;
 .abouttext{
     padding:4% 8%;
     width: 100%;
-    margin: 8% auto 0%;
+    /* margin: 8% auto 0%; */
     z-index: 500;
     position: relative;
     background-color: rgb(14,19,28,0.7);
@@ -1958,16 +1960,7 @@ z-index: 600;
 Wordz
 
 -------------------------------- */
-.word {
-	position: absolute;
-	font-family: 'Open Sans', !important;
-    width: 100%;
-    left: 0;
-  	/* opacity: 0; */
-  	font-size:5vw;
-	letter-spacing:3px;
-	color: white;
-}
+
 
 .letter {
   display: inline-block;
@@ -2411,6 +2404,9 @@ main .cd-main-content.cd-contact {
   -moz-transition: -moz-transform 0.8s 0.8s ease-in;
   transition: transform 0.8s 0.8s ease-in;
 }
+.clg_name {
+	font-family: 'open sans';
+}
 /* -------------------------------- 
 
 QUERY START
@@ -2434,6 +2430,7 @@ QUERY 650px
 	border: #191f2b solid 0px;
 	border-radius: 44% 49% 45% 47%;
 	box-shadow: inset 0px 0px 40px #1d232e, 0 0 90px #101011;
+	animation:rotate 10s infinite;
 }
 
 
@@ -3757,15 +3754,22 @@ width: 33%;
 	margin: 75% 0 0 0;
 	position: relative;
 }
+.gallery_image{
+	overflow: hidden; height: 500px;
+}
 @media only screen and (max-width: 1024px) {
 	.strategy {
 		margin-top:70%
 	}
+	.gallery_image{
+		height: 400px;
+	}
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 768px) {
 	.strategy .direction .design {
 		padding:10%;
 	}
+	
 }
 .skillzpic{
 	position: relative;
@@ -3798,12 +3802,12 @@ width: 33%;
 	background-size: 44%, 70%;
 }
 .leftylink{
-    left: -70px;
+    left: -100px;
     font-size: 18px;
 	display: block;
 }
 .rightylink{
-    right: -200px;
+    right: -212px;
     font-size: 18px;
 	display: block;
 }
@@ -3857,7 +3861,7 @@ text-align: right;
 .abouttext{
 	padding: 4% 8%;
     width: 60%;
-    margin: 10% auto 4%;
+    /* margin: 10% auto 4%; */
     z-index: 500;
     position: relative;
     background-color: rgb(14,19,28,0.7);
@@ -3865,7 +3869,7 @@ text-align: right;
 }
 .abouttext_gallery{
 	padding: 4% 4%;
-    width: 80%;
+    width: 70%;
     margin: 10% auto 4%;
     z-index: 500;
     position: relative;

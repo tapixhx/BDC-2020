@@ -1,0 +1,89 @@
+/* Scrollbar */
+/* width */
+.all::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.all::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 2px;
+}
+
+/* Handle */
+.all::-webkit-scrollbar-thumb {
+    background: #696969; 
+    border-radius: 2px;
+}
+
+/* Handle on hover */
+.all::-webkit-scrollbar-thumb:hover {
+    background: #000000; 
+}
+/* Scrollbar */
+/* width */
+.update::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.update::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 2px;
+}
+
+/* Handle */
+.update::-webkit-scrollbar-thumb {
+    background: #696969; 
+    border-radius: 2px;
+}
+
+/* Handle on hover */
+.update::-webkit-scrollbar-thumb:hover {
+    background: #000000; 
+}
+/* Scrollbar */
+/* width */
+.contain-notification-board::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.contain-notification-board::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 2px;
+}
+
+/* Handle */
+.contain-notification-board::-webkit-scrollbar-thumb {
+    background: #696969; 
+    border-radius: 2px;
+}
+
+/* Handle on hover */
+.contain-notification-board::-webkit-scrollbar-thumb:hover {
+    background: #000000; 
+}
+/* Scrollbar */
+/* width */
+.contain-update-card::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.contain-update-card::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 2px;
+}
+
+/* Handle */
+.contain-update-card::-webkit-scrollbar-thumb {
+    background: #696969; 
+    border-radius: 2px;
+}
+
+/* Handle on hover */
+.contain-update-card::-webkit-scrollbar-thumb:hover {
+    background: #000000; 
+}
+/* Scrollbar */

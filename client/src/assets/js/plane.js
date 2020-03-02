@@ -1,10 +1,8 @@
 planeySize = function () {
     // Get the real width of the planey image
-    console.log('plane chlra')
     var plane = $("#plane");
     var newImage = new Image();
     newImage.src = plane.attr("src");
-    console.log('igjhik')
     var imgWidth = 310;
     
     // distance over which zoom effect takes place

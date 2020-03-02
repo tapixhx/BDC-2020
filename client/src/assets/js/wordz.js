@@ -10,7 +10,6 @@ function startWords () {
     words = document.getElementsByClassName('word');
     currentWord = 0;
     wordArray = [];
-    console.log('khj')
     
     words[currentWord].style.opacity = 1;
     for (var i = 0; i < words.length; i++) {
